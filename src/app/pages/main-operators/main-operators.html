@@ -1,0 +1,32 @@
+<div class="main-operators">
+  <p-tabs value="0">
+    <p-tablist>
+      <p-tab value="0">switchMap</p-tab>
+      <p-tab value="1">mergeMap</p-tab>
+      <p-tab value="2">concatMap</p-tab>
+      <p-tab value="3">exhaustMap</p-tab>
+    </p-tablist>
+
+    <p-tabpanels>
+      <p-tabpanel value="0">
+          <p>Annule la requête précédente quand une nouvelle arrive.</p>
+          <app-operator-demo [operator]="'switchMap'" />
+      </p-tabpanel>
+
+      <p-tabpanel value="1">
+          <p>Exécute toutes les requêtes en parallèle.</p>
+          <app-operator-demo [operator]="'mergeMap'" />
+      </p-tabpanel>
+
+      <p-tabpanel value="2">
+          <p>Exécute les requêtes séquentiellement, une après l'autre.</p>
+          <app-operator-demo [operator]="'concatMap'" />
+      </p-tabpanel>
+
+      <p-tabpanel value="3">
+          <p>Ignore les nouvelles requêtes tant que la précédente n'est pas terminée.</p>
+          <app-operator-demo [operator]="'exhaustMap'" />
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>

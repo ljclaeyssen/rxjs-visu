@@ -1,0 +1,26 @@
+<div class="operator-demo">
+  <div class="controls">
+    <p-button label="Émettre 1x" icon="pi pi-play" (onClick)="emitOnce()" />
+    <p-button label="Émettre 5x" icon="pi pi-forward" severity="secondary" (onClick)="emitFiveTimes()" />
+    <p-button label="Clear" icon="pi pi-trash" severity="danger" [outlined]="true" (onClick)="clear()" />
+
+    @if (activeRequests() > 0) {
+      <p-tag [value]="activeRequests() + ' requête(s) en cours'" severity="warn" icon="pi pi-spin pi-spinner" />
+    }
+  </div>
+
+  <div class="logs">
+    @for (log of logs(); track log.id) {
+      <div class="log-entry" [class]="'log-' + log.type">
+        <p-tag [value]="log.type" [severity]="getTagSeverity(log.type)" />
+        <span class="log-message">{{ log.message }}</span>
+        <span class="log-time">{{ log.timestamp | date:'HH:mm:ss.SSS' }}</span>
+      </div>
+    } @empty {
+      <div class="empty-state">
+        <i class="pi pi-inbox"></i>
+        <p>Cliquez sur un bouton pour voir l'opérateur en action</p>
+      </div>
+    }
+  </div>
+</div>

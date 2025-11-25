@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\Users\\ljcla\\WebstormProjects\\rxjs-visualization\\src\")",
+      "Bash(tree:*)",
+      "WebFetch(domain:primeng.org)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx ng:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

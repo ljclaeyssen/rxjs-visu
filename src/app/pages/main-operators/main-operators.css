@@ -1,0 +1,21 @@
+.main-operators {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-operators h1 {
+  margin-bottom: 1.5rem;
+}
+
+.tab-content {
+  padding: 1.5rem 0;
+}
+
+.tab-content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.tab-content p {
+  color: var(--p-text-muted-color);
+}
